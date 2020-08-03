@@ -1,0 +1,11 @@
+<p>purchases works!</p>
+
+<div class="rounded">
+    <div class="container-fluid light">
+      <div class="row">
+        <div *ngFor="let pur of purchases">
+          <app-movie-card [movie]="pur.movie"> </app-movie-card>
+        </div>
+      </div>
+    </div>
+  </div>

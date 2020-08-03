@@ -33,7 +33,7 @@ export class ApiService {
     // 1,2,3 where , filter ( n => n> 2) = 3
     return this.http.get(`${environment.apiUrl}${path}`)
       .pipe(
-        map((resp) => resp as any[])
+        map((resp) => resp as any[]) //http resp will get JSON array
         );
   }
 
@@ -41,7 +41,7 @@ export class ApiService {
   // get userinfo by id
   // http://localhost:58601/api/movies/1
   getOne(path:string, id: number): Observable<any> {
-
+    console.log(`${environment.apiUrl}${path}`+'/'+id)
     return this.http.get(`${environment.apiUrl}${path}`+'/'+id).pipe(
       map(resp => resp as any)
     );

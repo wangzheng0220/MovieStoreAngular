@@ -1,0 +1,11 @@
+<p>favorites works!</p>
+
+<div class="rounded">
+    <div class="container-fluid light">
+      <div class="row">
+        <div *ngFor="let fav of favorites">
+          <app-movie-card [movie]="fav.movie"> </app-movie-card>
+        </div>
+      </div>
+    </div>
+  </div>

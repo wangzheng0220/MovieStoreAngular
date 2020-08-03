@@ -4,12 +4,10 @@
 <!-- Structural Directives -->
 <!-- ngFor, ngIf and ngSwitch -->
 
-<ul>
-    <li *ngFor="let genre of genres" >
-        <a href="#" >
-            {{genre.name}}
-            <!-- {{5+5}}
-            {{6*6}} -->
-        </a>
-    </li>
+<ul class="list-unstyled p-2">
+  <li *ngFor="let genre of genres" class="m-1">
+    <a [routerLink]="['movies/genre', genre.id]">{{ genre.name }}</a>
+  </li>
 </ul>
+
+<!-- for navigation/routing in angular inseatd of using href we use Angular Router -->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Movie } from './../../models/movie';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-movie-card',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieCardComponent implements OnInit {
 
+  @Input() movie: Movie;
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+
+//  two ways to share data between related components
+//  for sending data from Parent component to child componnet we use @input decorator
+//  for emitting data from child to parent we use @output decorator
